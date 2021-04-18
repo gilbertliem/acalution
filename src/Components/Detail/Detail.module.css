@@ -1,0 +1,324 @@
+.card {
+  padding: 1rem 2rem;
+  margin: 1rem 10rem;
+  border-radius: 5px;
+  /* border: 1px solid black; */
+}
+
+.navigation {
+  text-transform: capitalize;
+  font-weight: 600;
+  display: flex;
+  gap: 1rem;
+  color: #9e8c49;
+  margin-bottom: 5rem;
+}
+
+.arrow {
+  font-weight: 600;
+  color: #9e8c49;
+  display: none;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.image {
+  height: 40rem;
+}
+
+.name {
+  color: #816042;
+  text-transform: capitalize;
+  font-size: 2.4rem;
+}
+
+.type {
+  display: flex;
+  gap: 1rem;
+  margin: 0.5rem 0 4rem 0;
+}
+
+.variety {
+  text-decoration: underline;
+  color: #141b31;
+  text-transform: capitalize;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.year,
+.price {
+  color: #141b31;
+  text-transform: capitalize;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.priceRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.btnColomn {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.button {
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  color: white;
+  font-size: 1rem;
+  text-transform: uppercase;
+  background-color: #cc9543;
+  cursor: pointer;
+}
+
+.btnDisabled {
+  outline: none;
+  border: none;
+  border-radius: 2px;
+  padding: 1rem 2rem;
+  color: white;
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: auto;
+  background-color: grey;
+}
+
+.mobileBtn {
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0.8rem 1rem;
+  color: white;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  background-color: #cc9543;
+  cursor: pointer;
+  display: none;
+  width: 100%;
+}
+
+.mobileBtnDisabled {
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0.8rem 1rem;
+  color: white;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  cursor: auto;
+  background-color: grey;
+  display: none;
+  width: 100%;
+}
+
+.bookmark {
+  height: 2.5rem;
+  cursor: pointer;
+}
+
+.detailRow {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr 1fr;
+  margin-bottom: 2rem;
+}
+
+.description {
+  margin-bottom: 2rem;
+}
+
+.subheader {
+  color: #c0b8ac;
+  text-transform: capitalize;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.info {
+  color: #141b31;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 1440px) {
+  .image {
+    height: 35rem;
+  }
+  .card {
+    padding: 1rem 1rem;
+    margin: 1rem 7rem;
+  }
+  .info,
+  .year,
+  .price,
+  .variety {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .image {
+    height: 30rem;
+  }
+  .card {
+    padding: 1rem 0;
+    margin: 1rem 7rem;
+  }
+  .info,
+  .year,
+  .price,
+  .variety {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  .name {
+    font-size: 2rem;
+  }
+  .subheader {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+  .button,
+  .btnDisabled {
+    padding: 0.7rem 1rem;
+  }
+  .bookmark {
+    height: 2rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .navigation {
+    font-size: 0.6rem;
+    font-weight: 500;
+    margin-bottom: 4rem;
+  }
+  .image {
+    height: 20rem;
+  }
+  .card {
+    padding: 1rem 0;
+    margin: 1rem 5rem;
+  }
+  .info,
+  .year,
+  .price,
+  .variety {
+    font-size: 0.7rem;
+    font-weight: 500;
+  }
+  .name {
+    font-size: 1.4rem;
+  }
+  .type {
+    margin: 0.2rem 0 1rem 0;
+  }
+  .subheader {
+    font-size: 0.6rem;
+    margin-bottom: 0.2rem;
+  }
+  .button,
+  .btnDisabled {
+    padding: 0.5rem 0.6rem;
+    font-size: 0.7rem;
+  }
+  .bookmark {
+    height: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .navigation {
+    margin-bottom: 3rem;
+  }
+  .card {
+    margin: 1rem 2rem;
+  }
+  .detailRow {
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 1rem;
+  }
+  .priceRow {
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .navigation {
+    margin-bottom: 1rem;
+    font-size: 0.4rem;
+    font-weight: 400;
+    gap: 0.5rem;
+  }
+  .card {
+    padding: 1rem;
+    margin: 0 0.5rem;
+  }
+  .image {
+    height: 10rem;
+  }
+  .name {
+    font-size: 1rem;
+  }
+  .info,
+  .year,
+  .price,
+  .variety {
+    font-size: 0.5rem;
+  }
+  .subheader {
+    font-size: 0.3rem;
+    margin-bottom: 0.1rem;
+  }
+  .button,
+  .btnDisabled {
+    padding: 0.3rem 0.4rem;
+    font-size: 0.5rem;
+  }
+  .bookmark {
+    height: 1.1rem;
+  }
+  .detailRow,
+  .priceRow {
+    margin-bottom: 0.6rem;
+  }
+  .description {
+    margin-bottom: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .navigation {
+    display: none;
+  }
+  .arrow {
+    display: inline;
+  }
+  .details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .image {
+    height: auto;
+    width: 5rem;
+  }
+  .button,
+  .btnDisabled {
+    display: none;
+  }
+  .mobileBtn,
+  .mobileBtnDisabled {
+    display: inline;
+  }
+}
