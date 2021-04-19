@@ -41,7 +41,7 @@ function App() {
 
   const productNumber = (e) => {
     let itemID = e.target.id;
-    // console.log(e.target.id);
+    console.log(e.target.id);
     setProductID(itemID);
   };
 
