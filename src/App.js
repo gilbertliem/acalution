@@ -9,6 +9,7 @@ function App() {
   const [wineList, setWineList] = useState([]);
   const [loading, setLoading] = useState(false);
   const [productID, setProductID] = useState("");
+  const [page, setPage] = useState(1);
 
   useEffect(() => {
     showList();
@@ -17,7 +18,8 @@ function App() {
   const showList = () => {
     setLoading(true);
     fetch(
-      "https://zax5j10412.execute-api.ap-southeast-1.amazonaws.com/dev/api/product/list?page=1"
+      // `https://zax5j10412.execute-api.ap-southeast-1.amazonaws.com/dev/api/product/list?page=1`
+      `https://zax5j10412.execute-api.ap-southeast-1.amazonaws.com/dev/api/product/list?page=${page}`
     )
       .then((res) => res.json())
       .then((result) => {
@@ -30,6 +32,11 @@ function App() {
         alert("Please refresh the page!");
         setLoading(false);
       });
+  };
+
+  const loadMore = () => {
+    setPage(page + 1);
+    showList();
   };
 
   const productNumber = (e) => {
@@ -67,10 +74,11 @@ function App() {
           <List
             wineList={wineList}
             loading={loading}
-            setLoading={setLoading}
+            loadMore={loadMore}
             productNumber={productNumber}
             addItem={addItem}
             addBookmark={addBookmark}
+            showList={showList}
           />
         </Route>
       </Switch>
