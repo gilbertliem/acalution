@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import Navbar from "./Components/Navbar/Navbar.jsx";
+import NavbarHome from "./Components/NavbarHome/NavbarHome.jsx";
+import NavbarDetail from "./Components/NavbarDetail/NavbarDetail.jsx";
 import List from "./Components/List/List.jsx";
 import Detail from "./Components/Detail/Detail.jsx";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -59,9 +60,9 @@ function App() {
 
   return (
     <Router>
-      <Navbar />
       <Switch>
         <Route path="/detail">
+          <NavbarDetail />
           <Detail
             loading={loading}
             setLoading={setLoading}
@@ -71,6 +72,7 @@ function App() {
           />
         </Route>
         <Route path="/">
+          <NavbarHome />
           <List
             wineList={wineList}
             loading={loading}

@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import styles from "./Navbar.module.css";
+import styles from "./NavbarDetail.module.css";
 import logo from "../../Assets/Images/logo.jpg";
-import menu from "../../Assets/Icons/menu.png";
+import back from "../../Assets/Icons/arrow.svg";
 import cart from "../../Assets/Icons/cart.png";
 
 const Navbar = () => {
@@ -11,7 +11,9 @@ const Navbar = () => {
       <div className={styles.website}>
         <nav>
           <div className={styles.left}>
-            <img src={menu} alt="menu" className={styles.icon} />
+            <Link to="/" className={styles.link}>
+              <img src={back} alt="menu" className={styles.icon} />
+            </Link>
             <Link to="/" className={styles.link}>
               <div className={styles.brand}>
                 <img src={logo} alt="WD" className={styles.logo} />
